@@ -1,0 +1,368 @@
+(Bread)
+Enter your password: 1234
+Your password is wrong! You have 2 chance to try again. 
+Enter your password: 12
+Your password is wrong! You have 1 chance to try again. 
+Enter your password: 12345
+Your password is correct.
+
+Options to access:
+1)Price Calculation for Bread
+2)Bill Payment
+
+Enter the option that want to access: 2
+
+Chocolate bread: RM6.12
+Garlic bread: RM4.11
+Butter sugar bread: RM4.12
+Red bean bread: RM4.52
+
+Do you have membership card?
+0 = NO
+1 = YES
+Enter number: 1
+Enter the membership card number: 09876
+
+Quantity of chocolate bread: 2
+Quantity of garlic bread: 3
+Quantity of butter sugar bread: 2
+Quantity of red bean bread: 1
+
+Total price      : RM37.33
+Discount received: RM3.73
+Price to be paid : RM33.60
+
+Amount received: RM50
+Change 	       : RM16.40
+
+(Cake)
+*    *    *   * * *  *        * *       *       * * * * *   * * *   
+*    *    *   *      *      *        *     *    *   *   *   *       
+*   * *   *   * *    *     *       *         *  *   *   *   * *     
+ * *   * *    *      *      *        *     *    *   *   *   *       
+  *     *     * * *  * * *    * *       *       *   *   *   * * *   
+
+                        *         *        *                        
+                      *   *     *   *    *   *                      
+                 *********************************                  
+                 *                               *                  
+                 *     *   *   *   *   *   *     *                  
+                 * * *   *   *   *   *   *   * * *                  
+                 *                               *                  
+                 *********************************                  
+                 * * * * * * * * * * * * * * * * *                  
+                 *********************************                  
+
+This Programme Will Calculate The Mass or Number of Ingridients for 1 Month
+
+Please enter the number of sale of the cake day by day in one week :
+Sale : 9
+Sale : 7
+Sale : 8
+Sale : 7
+Sale : 9
+Sale : 8
+Sale : 7
+
+The total of cake sale for one week is 55
+The average of number cake sale for one day is 7
+
+Please enter the number or mass of ingredient for making 1 cake : 
+Flour in kg         : 0.3
+Eggs                : 2
+Sugar in kg         : 0.1
+Baking powder in kg : 0.01
+Ovallete in kg      : 0.01
+Chocolate in kg     : 0.1
+
+Please enter the number or mass of stock remaining in your store :
+Flour in kg         : 2
+Eggs                : 3
+Sugar in kg         : 1
+Baking powder in kg : 1
+Ovallete in kg      : 1
+Chocolate in kg     : 4
+
+The results    
+Flour         : 61.0 kg
+Eggs          : 417
+Sugar         : 20.0 kg
+Baking powder : 1.1 kg
+Ovalette      : 1.1 kg
+Chocolate     : 17.0 kg
+
+Do you want to add more the ingredient???
+If you want to add more the amount of the ingredient , please enter 1
+If you want to stay with the amount of the ingredient, please enter 0
+1
+
+Flour         : 61.0 kg
+Please enter the new mass of flour in kg : 65
+
+Eggs          : 417
+Please enter the new number of eggs : 420
+
+Sugar         : 20.0 kg
+Please enter the new mass of sugar in kg : 25
+
+Baking powder : 1.1 kg
+Please enter the new mass of baking powder in kg : 2
+
+Ovalette      : 1.1 kg
+Please enter the new mass of ovallet in kg : 2
+
+Chocolate     : 17.0 kg
+Please enter the new mass of chocolate in kg : 20
+
+The final results    
+Flour         : 65.0 kg
+Eggs          : 420
+Sugar         : 25.0 kg
+Baking powder : 2.0 kg
+Ovalette      : 2.0 kg
+Chocolate     : 20.0 kg
+
+(Rice)
+Hi,what service do you need?
+1:Calculate the yield.
+2:Calculate the next harvest amount.
+0:Exit.
+Please enter the number.
+1
+
+
+Please enter the weight in sample unit(kg/10m2)
+Enter the weight of Black rice:
+11
+Enter the weight of Jasmine rice:
+22
+Enter the weight of Brown rice:
+33
+Enter the weight of Red Cargo rice:
+44
+Enter the weight of Sticky rice:
+55
+Enter the weight of Long grain white rice:
+66
+Please enter the area of the farm of each type of rice (hectare)
+Enter the area of Black rice farm:
+1
+Enter the area of Jasmine rice farm:
+2
+Enter the area of Brown rice farm:
+3
+Enter the area of Red Cargo rice farm:
+4
+Enter the area of Sticky rice farm:
+5
+Enter the area of Long grain white rice farm:
+6
+
+************************************************
+*The formula of kg/ha is kg/10m2 x 1000 = kg/ha*
+*The formula of kg is kg/ha x hectare = kg     *
+*The yield of each type of rice in kg          *
+************************************************
+
+Black rice :11000.00kg
+Jasmine rice :44000.00kg
+Brown rice :99000.00kg
+Red Cargo rice :176000.00kg
+Sticky rice :275000.00kg
+Long grain white rice :396000.00kg
+
+**********************************************
+*The formula of 1 kg/ha is 2.2lbs/ha         *
+*The formula of lbs is lbs/ha x hectare = lbs*
+*The yield of each type of rice in lbs       *
+**********************************************
+
+Black rice :24200.00lbs
+Jasmine rice :96800.00lbs
+Brown rice :217800.00lbs
+Red Cargo rice :387200.00lbs
+Sticky rice :605000.00lbs
+Long grain white rice :871200.00lbs
+
+
+
+
+Hi,what service do you need?
+1:Calculate the yield.
+2:Calculate the next harvest amount.
+0:Exit.
+Please enter the number.
+2
+
+
+
+Please enter the current yield of Black rice(kg/ha)
+11
+Please enter the current yield of Jasmine rice(kg/ha)
+22
+Please enter the current yield of Brown rice(kg/ha)
+33
+Please enter the current yield of Red Cargo rice(kg/ha)
+44
+Please enter the current yield of Sticky rice(kg/ha)
+55
+Please enter the current yield of Long grain white rice(kg/ha)
+66
+Please select the percentage by following type of factors
+Climate
+Spring: +10%
+Summer: +10%
+Autumn: -10%
+Winter: +5%
+Enter the percentage(%)
+10
+Government policy
+Tax: -5%
+Allowance: +10%
+Enter the percentage(%)
+10
+Human Resources
+Enough: +10%
+Lack: -10%
+Enter the percentage(%)
+10
+Cost of production
+Increase: -5%
+Decrease: +5%
+Enter the percentage(%)
+-5
+The next harvest amount of each of the rice
+The amount of the black rice:13.75kg/ha
+The amount of the Jasmine rice:27.50kg/ha
+The amount of the Brown rice:41.25kg/ha
+The amount of the Red Cargo rice:55.00kg/ha
+The amount of the Sticky rice:68.75kg/ha
+The amount of the Long grain white rice:82.50kg/ha
+
+
+
+
+Hi,what service do you need?
+1:Calculate the yield.
+2:Calculate the next harvest amount.
+0:Exit.
+Please enter the number.
+0
+
+
+ok,you're exit.
+Thank you by using our service.
+Goodbye!
+
+(Dessert)
+Enter the type of the first dessert : Chocolate
+Enter the type of the second dessert : Lemon pie
+Enter the type of the third dessert : Apple puff
+Enter the type of the fourth dessert : Macaron
+Enter the type of the fifth dessert : Ice cream
+Enter the price of the Chocolate : RM25
+Enter the cost of ingredients of the Chocolate : RM18
+Enter the price of the Lemon pie : RM16
+Enter the cost of ingredients of the Lemon pie : RM9
+Enter the price of the Apple puff : RM12
+Enter the cost of ingredients of the Apple puff : RM7
+Enter the price of the Macaron : RM25
+Enter the cost of ingredients of the Macaron : RM15
+Enter the price of the Ice cream : RM16
+Enter the cost of ingredients of the Ice cream : RM10
+Enter the quantity of the Chocolate sold : 56
+Enter the quantity of the Lemon pie sold : 98
+Enter the quantity of the Apple puff sold : 135
+Enter the quantity of the Macaron sold : 203
+Enter the quantity of the Ice cream sold : 165
+Have you hired staff? (Yes or No)
+y
+Enter the number of employees you hired : 2
+Enter the employee salary : RM1000
+Enter the rent payment per month : RM500
+Enter the utilities fee for this month : RM600
+Enter the transport fee for this month : RM350
+
+1.Chocolate 	Price: RM25.0 	Quantity Sold: 56 	Cost: RM18.0 	Gross Profit: RM7.0
+2.Lemon pie 	Price: RM16.0 	Quantity Sold: 98 	Cost: RM9.0 	Gross Profit: RM7.0
+3.Apple puff 	Price: RM12.0 	Quantity Sold: 135 	Cost: RM7.0 	Gross Profit: RM5.0
+4.Macaron 	Price: RM25.0 	Quantity Sold: 203 	Cost: RM15.0 	Gross Profit: RM10.0
+5.Ice cream 	Price: RM16.0 	Quantity Sold: 165 	Cost: RM10.0 	Gross Profit: RM6.0
+	**************************************************************************
+	 TOTAL SALES    	   = RM12303.0
+	 TOTAL COST OF INGREDIENTS = RM7530.0
+	______________________________________________
+	 TOTAL GROSS PROFIT 	   = RM4773.0
+	----------------------------------------------
+	 EMPLOYEE SALARY= RM2000.0
+	 RENT PAYMENT 	= RM500.0
+	 UTILITIES FEE 	= RM600.0
+	 TRANSPORT FEE 	= RM350.0
+	______________________________________________
+	 TOTAL COST 	= RM3450.0
+	______________________________________________
+	 NET INCOME 	= RM1323.0
+	**************************************************************************
+"Despite the low income, you can keep your business going."
+
+(Fruit)
+Please enter your name : Laila
+Please enter your state : Selangor
+Please enter your gender : Female
+Please enter your age : 21
+
+Welcome to the Green Eagle Seed Application,Laila
+
+* * * * * * * * * * * *
+MENU
+Type of seed      * Price (200g) * Price (500g) 
+**************************************************************
+Apple             *    RM60      *   RM110      
+Premium Apple     *    RM70      *   RM120      
+Strawberry        *    RM80      *   RM150      
+Premium Strawberry*    RM90      *   RM160      
+Grape             *    RM50      *   RM100      
+Premium Grape     *    RM60      *   RM110      
+Orange            *    RM45      *    RM90      
+Premium Orange    *    RM55      *   RM100      
+**************************************************************
+
+Please enter the type of seed you want to buy : Strawberry
+Choose either 200g or 500g : 500
+Enter the price of seed you want to buy : RM150
+How many bag of seed you want to buy ? : 6
+* * * * * * * * 
+Please enter the second type of seed you want : Orange
+Choose either 200g or 500g : 500
+Enter the price of seed you want to buy : RM90
+How many bag of seed you want to buy ? : 4
+The total price of your products : RM1260
+
+Are you a member ?
+Enter 'Y' if you are a member. 
+Enter 'N' if you are not a member.
+N
+Do you want to be a member ?
+Enter 'A' if you want to be a member. 
+Enter 'B' if you do not want to be a member.
+A
+Your member's name is Laila
+
+If you are a member, you will get benefits like down below :
+You will get a RM5 off voucher for next purchase for minimum spending RM100. 
+If you are spending RM300 and above, you will get a RM10 off for next purchase, a free tool and free delivery.
+
+You can choose the method of paying.
+Enter [1] for online banking. 
+Enter [2] for cash on delivery.
+Please enter your choice : 3
+INVALID METHOD
+Please enter your choice again : 1
+You are choosing online banking as a payment method.
+
+******************************************************
+You will get 25% off as a new member.
+You have to pay RM50 per year to keep being a member.
+You get RM315 off.
+You have to pay RM5 for delivery cost.
+The final amount you have to pay is RM1000
