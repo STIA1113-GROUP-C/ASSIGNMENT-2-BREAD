@@ -1,0 +1,942 @@
+(Bread)
+package assignment2;
+import java.util.Scanner;
+public class Bread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		double flour, sugar, yeast, egg;
+		double garlic, chocolate, milk, butter;
+		double buttermilk, redbean, total; double totalprice = 0;
+		int options, card, member;
+		double ChocolateBread = 6.12;
+		double GarlicBread = 4.11;
+		double ButterSugarBread = 4.12;
+		double RedBeanBread = 4.52;
+		int a,b,c,d;
+		
+		for(int i=2;i>=0;i--) {
+            System.out.print("Enter your password: ");
+            int type = sc.nextInt();
+            int pass = 12345;
+            if(type==pass) {
+            System.out.println("Your password is correct.");
+            break;
+            }else
+            System.out.print("Your password is wrong! You have "+i+" chance to try again. ");
+            System.out.println();
+            if(i==0) {
+            System.out.print("Sorry, you need to wait for 5 minutes to key in your passwork again!");
+            return;
+            }
+        }
+		System.out.println("\nOptions to access:");
+		System.out.println("1)Price Calculation for Bread");
+		System.out.println("2)Bill Payment\n");
+		System.out.print("Enter the option that want to access: ");
+		options = sc.nextInt();
+		
+		if(options == 1) {
+		System.out.print("\nEnter price of 1kg flour for one packet: RM");
+		flour = sc.nextDouble();
+		System.out.print("Enter price of 1kg sugar for one packet: RM");
+		sugar = sc.nextDouble();
+		System.out.print("Enter price of egg for one dozen: RM");
+		egg = sc.nextDouble();
+		System.out.print("Enter price of 11g yeast for one packet: RM");
+		yeast = sc.nextDouble();
+		System.out.print("Enter price of 1Litre milk for one carton: RM");
+		milk = sc.nextDouble();
+		System.out.print("Enter price of 250g butter for one packet: RM");
+		butter = sc.nextDouble();
+		System.out.print("Enter price of chocolate for one bar: RM");
+		chocolate = sc.nextDouble();
+		System.out.print("Enter price of 500g garlic for one bag: RM");
+		garlic = sc.nextDouble();
+		System.out.print("Enter price of 325g buttermilk for one carton: RM");
+		buttermilk = sc.nextDouble();
+		System.out.print("Enter price of 300g red bean for one bag: RM");
+		redbean = sc.nextDouble();
+		
+		double costCB = 0.125*chocolate + 0.115*flour + 0.0125*sugar + 0.5*egg + 0.19*yeast + 0.045*milk + 0.115*butter;
+		double costGB = 0.1*garlic + 0.10575*flour + 0.0095*sugar + 0.25*egg + 0.17*yeast + 0.0125*milk + 0.112*butter;
+		double costBSB = 0.035*buttermilk + 0.1125*flour + 0.01875*sugar + 0.25*egg + 0.185*yeast + 0.14*butter;
+		double costRBB = 0.1675*redbean + 0.11*flour + 0.015*sugar + 0.25*egg + 0.19*yeast + 0.025*milk + 0.08*butter;
+		
+		System.out.printf("\nCost of chocolate breads is: RM%.2f" , costCB);
+		System.out.println();
+		System.out.printf("Cost of garlic bread is: RM%.2f" , costGB);
+		System.out.println();
+		System.out.printf("Cost of butter sugar bread is: RM%.2f" , costBSB);
+		System.out.println();
+		System.out.printf("Cost of red bean bread is: RM%.2f" , costRBB);
+		System.out.println();
+		
+		double priceCB = (costCB*1.2);
+		double priceGB = (costGB*1.35);
+		double priceBSB = (costBSB*1.35);
+		double priceRBB = (costRBB*1.3);
+		
+		System.out.printf("\nPrice of chocolate bread is: RM%.2f" , priceCB);
+		System.out.println();
+		System.out.printf("Price of garlic bread is: RM%.2f" , priceGB);
+		System.out.println();
+		System.out.printf("Price of butter sugar bread is: RM%.2f" , priceBSB);
+		System.out.println();
+		System.out.printf("Price of red bean bread is: RM%.2f" , priceRBB);
+		}
+		
+		else if(options == 2) {
+			System.out.println("\nChocolate bread: RM6.12");
+			System.out.println("Garlic bread: RM4.11");
+			System.out.println("Butter sugar bread: RM4.12");
+			System.out.println("Red bean bread: RM4.52");
+			
+			System.out.println("\nDo you have membership card?");
+			System.out.println("0 = NO");
+			System.out.println("1 = YES");
+			System.out.print("Enter number: ");
+			card = sc.nextInt(); 
+			
+			if(card == 1) {
+				System.out.print("Enter the membership card number: ");
+				member = sc.nextInt(); 
+			}
+			System.out.print("\nQuantity of chocolate bread: ");
+			a = sc.nextInt(); 
+			System.out.print("Quantity of garlic bread: ");
+			b = sc.nextInt(); 
+			System.out.print("Quantity of butter sugar bread: ");
+			c = sc.nextInt(); 
+			System.out.print("Quantity of red bean bread: ");
+			d = sc.nextInt(); 
+			total = a*ChocolateBread + b*GarlicBread + c*ButterSugarBread + d*RedBeanBread;
+			
+				if(card == 0) { 
+					totalprice = a*ChocolateBread + b*GarlicBread + c*ButterSugarBread + d*RedBeanBread;
+					System.out.printf("\nPrice to be paid: RM%.2f%n" , totalprice);
+					}
+			
+				if(card == 1) {
+					double discountreceived = (total*0.1);
+					totalprice = total - discountreceived;
+					System.out.println();
+					System.out.printf("Total price      : RM%.2f%n" , total);
+					System.out.printf("Discount received: RM%.2f%n" , discountreceived);
+					System.out.printf("Price to be paid : RM%.2f%n" , totalprice);
+				}
+			System.out.print("\nAmount received: RM");
+			double amount = sc.nextDouble();
+			double change = amount - totalprice;
+			System.out.printf("Change 	       : RM%.2f" , change);
+		}	
+		
+	}
+
+}
+
+(Cake)
+package Assignment_2;
+import java.util.Scanner;
+public class cake {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("*    *    *   * * *  *        * *       *       * * * * *   * * *   ");
+		System.out.println("*    *    *   *      *      *        *     *    *   *   *   *       ");
+		System.out.println("*   * *   *   * *    *     *       *         *  *   *   *   * *     ");
+		System.out.println(" * *   * *    *      *      *        *     *    *   *   *   *       ");
+		System.out.println("  *     *     * * *  * * *    * *       *       *   *   *   * * *   ");
+		
+		System.out.println();
+		
+		System.out.println("                        *         *        *                        ");
+		System.out.println("                      *   *     *   *    *   *                      ");
+		System.out.println("                 *********************************                  ");
+		System.out.println("                 *                               *                  ");
+		System.out.println("                 *     *   *   *   *   *   *     *                  ");
+		System.out.println("                 * * *   *   *   *   *   *   * * *                  ");
+		System.out.println("                 *                               *                  ");
+		System.out.println("                 *********************************                  ");
+		System.out.println("                 * * * * * * * * * * * * * * * * *                  ");
+		System.out.println("                 *********************************                  ");
+		
+		System.out.println();
+		
+		System.out.println("This Programme Will Calculate The Mass or Number of Ingridients for 1 Month");
+		System.out.println();
+		
+		int num, i = 0, num_s, total = 0, average;
+		int egg, egg_s, cake_m, total_egg, f_egg, g_egg; 
+		double flour, sugar, baking, ovallet, chocolate, flour_s, sugar_s, baking_s, ovallet_s, chocolate_s;
+		double total_flour, total_baking, total_ovallet, total_chocolate, total_sugar;
+		double f_flour, f_baking, f_ovallet, f_chocolate, f_sugar;
+		double g_flour, g_baking, g_ovallet, g_chocolate, g_sugar;
+		
+		System.out.println("Please enter the number of sale of the cake day by day in one week :");
+		
+		while(i < 7) {
+			System.out.print("Sale : ");
+			num = sc.nextInt();
+			total = total + num;
+			i = i + 1;
+			
+		}
+		System.out.println();
+		
+		System.out.println("The total of cake sale for one week is " + total);
+	    average = total / 7;
+	    System.out.println("The average of number cake sale for one day is " + average);
+	    
+
+		System.out.println();
+		
+		System.out.println("Please enter the number or mass of ingredient for making 1 cake : ");
+		System.out.print("Flour in kg         : ");
+		flour = sc.nextDouble();
+		System.out.print("Eggs                : ");
+		egg = sc.nextInt();
+		System.out.print("Sugar in kg         : ");
+		sugar = sc.nextDouble();
+		System.out.print("Baking powder in kg : ");
+		baking = sc.nextDouble();
+		System.out.print("Ovallete in kg      : ");
+		ovallet = sc.nextDouble();
+		System.out.print("Chocolate in kg     : ");
+		chocolate = sc.nextDouble();
+		
+		System.out.println();
+		
+		System.out.println("Please enter the number or mass of stock remaining in your store :");
+		System.out.print("Flour in kg         : ");
+		flour_s = sc.nextDouble();
+		System.out.print("Eggs                : ");
+		egg_s = sc.nextInt();
+		System.out.print("Sugar in kg         : ");
+		sugar_s = sc.nextDouble();
+		System.out.print("Baking powder in kg : ");
+		baking_s = sc.nextDouble();
+		System.out.print("Ovallete in kg      : ");
+		ovallet_s = sc.nextDouble();
+		System.out.print("Chocolate in kg     : ");
+		chocolate_s = sc.nextDouble();
+		
+        cake_m = average * 30;
+		
+		total_flour = flour * cake_m;
+		total_egg = egg * cake_m;
+		total_sugar = sugar * cake_m;
+		total_baking = baking * cake_m;
+		total_ovallet = ovallet * cake_m;
+		total_chocolate = chocolate * cake_m;
+		
+		f_flour = total_flour - flour_s;
+		f_egg = total_egg - egg_s;
+		f_sugar = total_sugar - sugar_s;
+		f_baking = total_baking - baking_s;
+		f_ovallet = total_ovallet - ovallet_s;
+		f_chocolate = total_chocolate - chocolate_s;
+		
+		System.out.println();
+		
+		System.out.println("The results    ");
+		System.out.println("Flour         : " + f_flour + " kg");
+		System.out.println("Eggs          : " + f_egg);
+		System.out.println("Sugar         : " + f_sugar + " kg");
+		System.out.println("Baking powder : " + f_baking + " kg");
+		System.out.println("Ovalette      : " + f_ovallet + " kg");
+		System.out.println("Chocolate     : " + f_chocolate + " kg");
+		
+		System.out.println();
+		
+		System.out.println("Do you want to add more the ingredient???");
+		System.out.println("If you want to add more the amount of the ingredient , please enter 1");
+		System.out.println("If you want to stay with the amount of the ingredient, please enter 0");
+		num_s = sc.nextInt();
+		
+		System.out.println();
+		
+		if(num_s > 0) 
+		{	
+			System.out.println("Flour         : " + f_flour + " kg");
+		    System.out.print("Please enter the new mass of flour in kg : ");
+		    g_flour = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Eggs          : " + f_egg);
+		    System.out.print("Please enter the new number of eggs : ");
+		    g_egg = sc.nextInt();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Sugar         : " + f_sugar + " kg");
+		    System.out.print("Please enter the new mass of sugar in kg : ");
+		    g_sugar = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Baking powder : " + f_baking + " kg");
+		    System.out.print("Please enter the new mass of baking powder in kg : ");
+		    g_baking = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Ovalette      : " + f_ovallet + " kg");
+		    System.out.print("Please enter the new mass of ovallet in kg : ");
+		    g_ovallet = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("Chocolate     : " + f_chocolate + " kg");
+		    System.out.print("Please enter the new mass of chocolate in kg : ");
+		    g_chocolate = sc.nextDouble();
+		    
+		    System.out.println();
+		    
+		    System.out.println("The final results    ");
+			System.out.println("Flour         : " + g_flour + " kg");
+			System.out.println("Eggs          : " + g_egg);
+			System.out.println("Sugar         : " + g_sugar + " kg");
+			System.out.println("Baking powder : " + g_baking + " kg");
+			System.out.println("Ovalette      : " + g_ovallet + " kg");
+			System.out.println("Chocolate     : " + g_chocolate + " kg");
+	    }
+		else {
+			System.out.println("The final results    ");
+		    System.out.println("Flour         : " + f_flour + " kg");
+		    System.out.println("Eggs          : " + f_egg);
+		    System.out.println("Sugar         : " + f_sugar + " kg");
+		    System.out.println("Baking powder : " + f_baking + " kg");
+		    System.out.println("Ovalette      : " + f_ovallet + " kg");
+		    System.out.println("Chocolate     : " + f_chocolate + " kg");
+		     }
+	}
+
+}
+
+(Rice)
+package rice;
+import java.util.Scanner;
+
+public class Rice2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		int x,y;
+		double a,b,c,d,e,f;
+		int p,q,r,s;
+		int percentage;
+		int i = 1;
+		
+		double a1;
+		double b1;
+		double c1;
+		double d1;
+		double e1;
+		double f1;
+		double sum1;
+		double sum2;
+		double sum3;
+		double sum4;
+		double sum5;
+		double sum6;
+		double sum7;
+		double sum8;
+		double sum9;
+		double sum10;
+		double sum11;
+		double sum12;
+		
+		
+		Scanner sc = new Scanner (System.in);
+		do {
+		System.out.println("Hi,what service do you need?");
+		System.out.println("1:Calculate the yield.");
+		System.out.println("2:Calculate the next harvest amount.");
+		System.out.println("0:Exit.");
+		System.out.println("Please enter the number.");
+		x = sc.nextInt();
+		
+		if(x == 1) {System.out.println("Please enter the weight in sample unit(kg/10m2)");
+		System.out.println("Enter the weight of Black rice:");
+	  a = sc.nextDouble(); 
+		
+		System.out.println("Enter the weight of Jasmine rice:");
+		b = sc.nextDouble();
+		
+		System.out.println("Enter the weight of Brown rice:");
+		c = sc.nextDouble();
+		
+		System.out.println("Enter the weight of Red Cargo rice:");
+		d = sc.nextDouble();
+		
+		System.out.println("Enter the weight of Sticky rice:");
+		e = sc.nextDouble();
+		
+		System.out.println("Enter the weight of Long grain white rice:");
+		f = sc.nextDouble();
+		
+		
+		System.out.println("Please enter the area of the farm of each type of rice (hectare)");
+		System.out.println("Enter the area of Black rice farm:");
+	  a1 = sc.nextDouble(); 
+		
+		System.out.println("Enter the area of Jasmine rice farm:");
+		b1 = sc.nextDouble();
+		
+		System.out.println("Enter the area of Brown rice farm:");
+		c1 = sc.nextDouble();
+		
+		System.out.println("Enter the area of Red Cargo rice farm:");
+		d1 = sc.nextDouble();
+		
+		System.out.println("Enter the area of Sticky rice farm:");
+		e1 = sc.nextDouble();
+		
+		System.out.println("Enter the area of Long grain white rice farm:");
+		f1 = sc.nextDouble();
+		
+		
+		System.out.println();
+		
+		
+		
+		sum1 = (a*1000) * a1;
+		sum2 = (b*1000) * b1;
+		sum3 = (c*1000) * c1;
+		sum4 = (d*1000) * d1;
+		sum5 = (e*1000) * e1;
+		sum6 = (f*1000) * f1;
+		
+		System.out.println("************************************************");
+		System.out.println("*The formula of kg/ha is kg/10m2 x 1000 = kg/ha*");
+		System.out.println("*The formula of kg is kg/ha x hectare = kg     *");
+		System.out.println("*The yield of each type of rice in kg          *");
+		System.out.println("************************************************"); 
+		
+		System.out.println();
+		
+		System.out.printf("%-7s%3.2f%2s%n","Black rice :" , sum1 , "kg");
+		System.out.printf("%-7s%3.2f%2s%n","Jasmine rice :" , sum2 , "kg");
+		System.out.printf("%-7s%3.2f%2s%n","Brown rice :" , sum3 , "kg");
+		System.out.printf("%-7s%3.2f%2s%n","Red Cargo rice :" , sum4 , "kg");
+		System.out.printf("%-7s%3.2f%2s%n","Sticky rice :" , sum5 , "kg");
+		System.out.printf("%-7s%3.2f%2s%n","Long grain white rice :" , sum6 , "kg");
+		
+		System.out.println();
+		
+		sum7 = sum1 * 2.2;
+		sum8 = sum2 * 2.2;
+		sum9 = sum3 * 2.2;
+		sum10 = sum4 * 2.2;
+		sum11 = sum5 * 2.2;
+		sum12 = sum6 * 2.2;
+		System.out.println("**********************************************");
+		System.out.println("*The formula of 1 kg/ha is 2.2lbs/ha         *");
+		System.out.println("*The formula of lbs is lbs/ha x hectare = lbs*");
+		System.out.println("*The yield of each type of rice in lbs       *");
+		System.out.println("**********************************************");
+		
+		System.out.println();
+		
+		System.out.printf("%-7s%3.2f%2s%n","Black rice :" , sum7 , "lbs");
+		System.out.printf("%-7s%3.2f%2s%n","Jasmine rice :" , sum8 , "lbs");
+		System.out.printf("%-7s%3.2f%2s%n","Brown rice :" , sum9 , "lbs");
+		System.out.printf("%-7s%3.2f%2s%n","Red Cargo rice :" , sum10 , "lbs");
+		System.out.printf("%-7s%3.2f%2s%n","Sticky rice :" , sum11 , "lbs");
+		System.out.printf("%-7s%3.2f%2s%n","Long grain white rice :" , sum12 , "lbs");}
+		
+		
+		
+		else if(x == 2) {System.out.println("Please enter the current yield of Black rice(kg/ha)");
+		a = sc.nextDouble();
+	
+	
+		System.out.println("Please enter the current yield of Jasmine rice(kg/ha)");
+		b = sc.nextDouble();
+	
+	
+		System.out.println("Please enter the current yield of Brown rice(kg/ha)");
+		c = sc.nextDouble();
+	
+	
+		System.out.println("Please enter the current yield of Red Cargo rice(kg/ha)");
+		d = sc.nextDouble();
+	
+	
+		System.out.println("Please enter the current yield of Sticky rice(kg/ha)");
+		e = sc.nextDouble();
+	
+	
+		System.out.println("Please enter the current yield of Long grain white rice(kg/ha)");
+		f = sc.nextDouble();
+	
+			System.out.println("Please select the percentage by following type of factors");
+			System.out.println("Climate");
+			System.out.println("Spring: +10%");
+			System.out.println("Summer: +10%");
+			System.out.println("Autumn: -10%");
+			System.out.println("Winter: +5%");
+			System.out.println("Enter the percentage(%)");
+			p = sc.nextInt();;
+			
+			System.out.println("Government policy");
+			System.out.println("Tax: -5%");
+			System.out.println("Allowance: +10%");
+			System.out.println("Enter the percentage(%)");
+			q = sc.nextInt();
+		
+			System.out.println("Human Resources");
+			System.out.println("Enough: +10%");
+			System.out.println("Lack: -10%");
+			System.out.println("Enter the percentage(%)");
+			r = sc.nextInt();
+			
+			System.out.println("Cost of production");
+			System.out.println("Increase: -5%");
+			System.out.println("Decrease: +5%");
+			System.out.println("Enter the percentage(%)");			
+			s = sc.nextInt();
+		
+		percentage = p+q+r+s;
+		
+		switch(percentage) {
+		case 5 : System.out.println("The next harvest amount of each of the rice");
+                 System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.05),"kg/ha") ;
+                 System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.05) ,"kg/ha") ; 
+                 System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.05),"kg/ha") ; 
+                 System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.05),"kg/ha") ; 
+                 System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.05),"kg/ha") ; 
+                 System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.05),"kg/ha") ; 
+        break;
+		         
+		case 10 : System.out.println("The next harvest amount of each of the rice");
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.10),"kg/ha") ;
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.10) ,"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.10),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.10),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.10),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.10),"kg/ha") ; 
+        break;      
+                  
+    case 15 : System.out.println("The next harvest amount of each of the rice");
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.15),"kg/ha") ;
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.15) ,"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.15),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.15),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.15),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.15),"kg/ha") ; 
+        break; 
+                  
+    case 20 : System.out.println("The next harvest amount of each of the rice");
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.20),"kg/ha") ;
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.20) ,"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.20),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.20),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.20),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.20),"kg/ha") ; 
+        break;
+        
+        
+    case 25 : System.out.println("The next harvest amount of each of the rice");
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.25),"kg/ha") ;
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.25) ,"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.25),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.25),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.25),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.25),"kg/ha") ; 
+        break;
+        
+    case 30 : System.out.println("The next harvest amount of each of the rice");
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.30),"kg/ha") ;
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.30) ,"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.30),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.30),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.30),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.30),"kg/ha") ; 
+        break;
+        
+    case 35 : System.out.println("The next harvest amount of each of the rice");
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the black rice:",(a * 1.35),"kg/ha") ;
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Jasmine rice:",(b * 1.35) ,"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Brown rice:",(c * 1.35),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Red Cargo rice:",(d * 1.35),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Sticky rice:",(e * 1.35),"kg/ha") ; 
+                  System.out.printf("%-7s%3.2f%2s%n","The amount of the Long grain white rice:",(f * 1.35),"kg/ha") ; 
+        break;
+                
+    default : System.out.println("You are something wrong.");}}
+        
+		else {//exit
+			for (y=1; y<4; y++) {
+			  if (y == 1) {
+				  System.out.println("ok,you're exit.");
+				  
+			  }else if (y==2) {
+				  System.out.println("Thank you by using our service.");
+			
+			  }else {
+				  System.out.println("Goodbye!");
+				  
+			  }i++;
+			  
+			  }
+
+		}
+		System.out.println();
+		
+       
+		}while(i<3);
+	 	}
+		
+		}
+    
+(Dessert)
+package Dessert;
+
+import java.util.Scanner;
+
+public class dessert_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		char reply;
+		String dessert1, dessert2, dessert3, dessert4, dessert5;
+		int quantity1, quantity2, quantity3, quantity4, quantity5, numberemployee,x;
+		double price1, price2, price3, price4, price5, cost1, cost2, cost3, cost4, cost5, grossprft1, grossprft2, grossprft3, grossprft4, grossprft5, totalcostingredients, totalgrossprft, totalsalary, totalothercosts, income, employeesalary, rent, utilities, transport, totalsales;
+			System.out.print("Enter the type of the first dessert : ");
+			dessert1 = sc.nextLine();
+			System.out.print("Enter the type of the second dessert : ");
+			dessert2 = sc.nextLine();
+			System.out.print("Enter the type of the third dessert : ");
+			dessert3 = sc.nextLine();
+			System.out.print("Enter the type of the fourth dessert : ");
+			dessert4 = sc.nextLine();
+			System.out.print("Enter the type of the fifth dessert : ");
+			dessert5 = sc.nextLine();
+			System.out.print("Enter the price of the "+dessert1+" : RM");
+			price1 = sc.nextDouble();
+			System.out.print("Enter the cost of ingredients of the "+dessert1+" : RM");
+			cost1 = sc.nextDouble();
+			System.out.print("Enter the price of the "+dessert2+" : RM");
+			price2 = sc.nextDouble();
+			System.out.print("Enter the cost of ingredients of the "+dessert2+" : RM");
+			cost2 = sc.nextDouble();
+			System.out.print("Enter the price of the "+dessert3+" : RM");
+			price3 = sc.nextDouble();
+			System.out.print("Enter the cost of ingredients of the "+dessert3+" : RM");
+			cost3 = sc.nextDouble();
+			System.out.print("Enter the price of the "+dessert4+" : RM");
+			price4 = sc.nextDouble();
+			System.out.print("Enter the cost of ingredients of the "+dessert4+" : RM");
+			cost4 = sc.nextDouble();
+			System.out.print("Enter the price of the "+dessert5+" : RM");
+			price5 = sc.nextDouble();
+			System.out.print("Enter the cost of ingredients of the "+dessert5+" : RM");
+			cost5 = sc.nextDouble();
+				grossprft1 = price1-cost1; 
+				grossprft2 = price2-cost2;
+				grossprft3 = price3-cost3;
+				grossprft4 = price4-cost4;
+				grossprft5 = price5-cost5;
+			System.out.print("Enter the quantity of the "+dessert1+" sold : ");
+			quantity1 = sc.nextInt();
+			System.out.print("Enter the quantity of the "+dessert2+" sold : ");
+			quantity2 = sc.nextInt();
+			System.out.print("Enter the quantity of the "+dessert3+" sold : ");
+			quantity3 = sc.nextInt();
+			System.out.print("Enter the quantity of the "+dessert4+" sold : ");
+			quantity4 = sc.nextInt();
+			System.out.print("Enter the quantity of the "+dessert5+" sold : ");
+			quantity5 = sc.nextInt();
+				totalcostingredients = (quantity1*cost1)+(quantity2*cost2)+(quantity3*cost3)+(quantity4*cost4)+(quantity5*cost5);
+				totalgrossprft = (quantity1* grossprft1)+(quantity2* grossprft2)+( quantity3* grossprft3)+(quantity4*grossprft4)+(quantity5* grossprft5);
+				totalsales = (price1*quantity1)+(price2*quantity2)+(price3*quantity3)+(price4*quantity4)+(price5*quantity5);
+			System.out.println("Have you hired staff? (Yes or No)");
+			reply = sc.next().charAt(0);
+			if(reply=='Y'||reply=='y') {
+			System.out.print("Enter the number of employees you hired : ");
+			numberemployee = sc.nextInt();
+			System.out.print("Enter the employee salary : RM");
+			employeesalary = sc.nextDouble();
+			totalsalary = 0;
+			for(x=0 ; x<numberemployee ; x++) {
+				totalsalary += employeesalary;
+			}
+			System.out.print("Enter the rent payment per month : RM");
+			rent = sc.nextDouble();
+			System.out.print("Enter the utilities fee for this month : RM");
+			utilities = sc.nextDouble();
+			System.out.print("Enter the transport fee for this month : RM");
+			transport = sc.nextDouble();
+				totalothercosts = totalsalary+rent+utilities+transport;
+				income = totalgrossprft-totalothercosts;
+			System.out.println();
+			System.out.println("1."+dessert1+" \tPrice: RM"+price1+" \tQuantity Sold: "+quantity1+" \tCost: RM"+cost1+" \tGross Profit: RM"+grossprft1);
+			System.out.println("2."+dessert2+" \tPrice: RM"+price2+" \tQuantity Sold: "+quantity2+" \tCost: RM"+cost2+" \tGross Profit: RM"+grossprft2);
+			System.out.println("3."+dessert3+" \tPrice: RM"+price3+" \tQuantity Sold: "+quantity3+" \tCost: RM"+cost3+" \tGross Profit: RM"+grossprft3);
+			System.out.println("4."+dessert4+" \tPrice: RM"+price4+" \tQuantity Sold: "+quantity4+" \tCost: RM"+cost4+" \tGross Profit: RM"+grossprft4);
+			System.out.println("5."+dessert5+" \tPrice: RM"+price5+" \tQuantity Sold: "+quantity5+" \tCost: RM"+cost5+" \tGross Profit: RM"+grossprft5);
+			System.out.println("\t**************************************************************************");
+			System.out.println("\t TOTAL SALES    \t   = RM"+totalsales);
+			System.out.println("\t TOTAL COST OF INGREDIENTS = RM"+totalcostingredients);
+			System.out.println("\t______________________________________________");
+			System.out.println("\t TOTAL GROSS PROFIT \t   = RM"+totalgrossprft);
+			System.out.println("\t----------------------------------------------");
+			System.out.println("\t EMPLOYEE SALARY= RM"+totalsalary);
+			System.out.println("\t RENT PAYMENT \t= RM"+rent);
+			System.out.println("\t UTILITIES FEE \t= RM"+utilities);
+			System.out.println("\t TRANSPORT FEE \t= RM"+transport);
+			System.out.println("\t______________________________________________");
+			System.out.println("\t TOTAL COST \t= RM"+totalothercosts);
+			System.out.println("\t______________________________________________");
+			System.out.println("\t NET INCOME \t= RM"+income);
+			System.out.println("\t**************************************************************************");
+			if(totalgrossprft>totalothercosts) {
+				if(income>=3000) {
+					System.out.println("\"You have a decent income and can keep your business going.\"");
+				}else if(income<3000) {
+					System.out.println("\"Despite the low income, you can keep your business going.\"");
+				}
+			}else {
+					System.out.println("\"Your company is losing money, and if you continue to operate, you will face bankruptcy.\"");
+			}
+			}else if(reply=='N'||reply=='n') {
+				System.out.print("Enter the rent payment per month : RM");
+				rent = sc.nextDouble();
+				System.out.print("Enter the utilities fee for this month : RM");
+				utilities = sc.nextDouble();
+				System.out.print("Enter the transport fee for this month : RM");
+				transport = sc.nextDouble();
+					totalothercosts = rent+utilities+transport;
+					income = totalgrossprft-totalothercosts;
+				System.out.println();
+				System.out.println("1."+dessert1+" \tPrice: RM"+price1+" \tQuantity Sold: "+quantity1+" \tCost: RM"+cost1+" \tGross Profit: RM"+grossprft1);
+				System.out.println("2."+dessert2+" \tPrice: RM"+price2+" \tQuantity Sold: "+quantity2+" \tCost: RM"+cost2+" \tGross Profit: RM"+grossprft2);
+				System.out.println("3."+dessert3+" \tPrice: RM"+price3+" \tQuantity Sold: "+quantity3+" \tCost: RM"+cost3+" \tGross Profit: RM"+grossprft3);
+				System.out.println("4."+dessert4+" \tPrice: RM"+price4+" \tQuantity Sold: "+quantity4+" \tCost: RM"+cost4+" \tGross Profit: RM"+grossprft4);
+				System.out.println("5."+dessert5+" \tPrice: RM"+price5+" \tQuantity Sold: "+quantity5+" \tCost: RM"+cost5+" \tGross Profit: RM"+grossprft5);
+				System.out.println("\t**************************************************************************");
+				System.out.println("\t TOTAL SALES    \t   = RM"+totalsales);
+				System.out.println("\t TOTAL COST OF INGREDIENTS = RM"+totalcostingredients);
+				System.out.println("\t______________________________________________");
+				System.out.println("\t TOTAL GROSS PROFIT \t   = RM"+totalgrossprft);
+				System.out.println("\t----------------------------------------------");
+				System.out.println("\t RENT PAYMENT \t= RM"+rent);
+				System.out.println("\t UTILITIES FEE \t= RM"+utilities);
+				System.out.println("\t TRANSPORT FEE \t= RM"+transport);
+				System.out.println("\t______________________________________________");
+				System.out.println("\t TOTAL COST \t= RM"+totalothercosts);
+				System.out.println("\t______________________________________________");
+				System.out.println("\t NET INCOME \t= RM"+income);
+				System.out.println("\t**************************************************************************");
+				if(totalgrossprft>totalothercosts) {
+					if(income>=3000) {
+						System.out.println("\"You have a decent income and can keep your business going.\"");
+					}else if(income<3000) {
+						System.out.println("\"Despite the low income, you can keep your business going.\"");
+					}
+				}else {
+						System.out.println("\"Your company is losing money, and if you continue to operate, you will face bankruptcy.\"");
+				}
+			}sc.close();
+	}
+
+}
+
+(Fruit)
+package taskTwo;
+import java.util.Scanner;
+public class Fruits2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner (System.in);
+		
+		String name;
+		String address;
+		String gender;
+		int age;
+		String fruit, fruit2;
+		int weight, weight2;
+		int amount, amount2;
+		int price1 , price2;
+		int finalprice, finalprice2; 
+		int total;
+		String member;
+		char choice;
+		int finaltotal;
+		int discountreceived;
+		int delivery;
+	    int method;
+		
+		
+		System.out.print("Please enter your name : ");
+		name = scan.next();
+		
+		System.out.print("Please enter your state : ");
+		address = scan.next();
+		
+		System.out.print("Please enter your gender : ");
+		gender = scan.next();
+		
+		System.out.print("Please enter your age : ");
+		age = scan.nextInt();
+		
+		System.out.println();
+		
+		System.out.print("Welcome to the Green Eagle Seed Application," + name );
+		
+		System.out.println();
+		System.out.println();
+		
+		System.out.println("* * * * * * * * * * * *");
+		
+		System.out.println("MENU");
+		
+		System.out.println("Type of seed      *" + " Price (200g) " + "*" + " Price (500g) ");
+		System.out.println("**************************************************************" );
+		System.out.println("Apple             *" + "    RM60      " + "*" + "   RM110      ");
+		System.out.println("Premium Apple     *" + "    RM70      " + "*" + "   RM120      ");
+		System.out.println("Strawberry        *" + "    RM80      " + "*" + "   RM150      ");
+		System.out.println("Premium Strawberry*" + "    RM90      " + "*" + "   RM160      ");
+		System.out.println("Grape             *" + "    RM50      " + "*" + "   RM100      ");
+		System.out.println("Premium Grape     *" + "    RM60      " + "*" + "   RM110      ");
+		System.out.println("Orange            *" + "    RM45      " + "*" + "    RM90      ");
+		System.out.println("Premium Orange    *" + "    RM55      " + "*" + "   RM100      ");
+		System.out.println("**************************************************************" );
+		
+		System.out.println();
+		
+		System.out.print("Please enter the type of seed you want to buy : ");
+		fruit = scan.next();
+			
+		System.out.print("Choose either 200g or 500g : " );
+		weight = scan.nextInt();
+		
+		System.out.print("Enter the price of seed you want to buy : RM");
+		price1 = scan.nextInt();
+		
+		System.out.print("How many bag of seed you want to buy ? : ");
+		amount = scan.nextInt();
+		
+		finalprice = price1 * amount;
+		
+		System.out.println("* * * * * * * * ");
+		
+		System.out.print("Please enter the second type of seed you want : ");
+		fruit2 = scan.next();
+	
+		System.out.print("Choose either 200g or 500g : ");
+		weight2 = scan.nextInt();
+		
+		System.out.print("Enter the price of seed you want to buy : RM");
+		price2 = scan.nextInt();
+	
+		System.out.print("How many bag of seed you want to buy ? : ");
+		amount2 = scan.nextInt();
+		
+		finalprice2 = price2 * amount2;
+		
+		total = finalprice + finalprice2;
+		
+		System.out.print("The total price of your products : RM" + total);
+		
+		System.out.println();
+		System.out.println();
+		
+		System.out.println("Are you a member ?");
+		System.out.println("Enter 'Y' if you are a member. \nEnter 'N' if you are not a member.");
+		member = scan.next();
+		choice = member.charAt(0);
+		
+		if (choice == 'N') {
+			System.out.println("Do you want to be a member ?");
+			System.out.println("Enter 'A' if you want to be a member. \nEnter 'B' if you do not want to be a member.");
+			member = scan.next();
+		    choice = member.charAt(0); 
+		}
+		
+		if (choice == 'A') 
+		   System.out.println("Your member's name is " + name);
+		
+		else if (choice == 'B')
+			System.out.println("You will not get any benefits.");
+			
+		else 
+			System.out.println("You already a member. ");
+			
+	    
+		System.out.println();
+		System.out.println("If you are a member, you will get benefits like down below :");
+		System.out.print("You will get a RM5 off voucher for next purchase for minimum spending RM100. \nIf you are spending RM300 and above, you will get a RM10 off for next purchase, a free tool and free delivery.");
+		
+		System.out.println();
+		System.out.println();
+		
+		System.out.println("You can choose the method of paying.");
+		System.out.println("Enter [1] for online banking. \nEnter [2] for cash on delivery.");
+		System.out.print("Please enter your choice : ");
+		method = scan.nextInt();
+		
+		while (method != 1 && method != 2 ) {
+			System.out.println("INVALID METHOD");
+			System.out.print("Please enter your choice again : ");
+			method = scan.nextInt();
+		}
+		
+		if (method == 1){
+			System.out.print("You are choosing online banking as a payment method.");
+		}
+		
+		else {
+			System.out.println("You are choosing cash on delivery as a payment method.");
+			
+		}
+		
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("******************************************************");
+		
+		if (choice == 'A') {
+			 System.out.println("You will get 25% off as a new member.");
+	         System.out.println("You have to pay RM50 per year to keep being a member.");
+			discountreceived = (total*25)/100;
+			System.out.println("You get RM" + discountreceived + " off.");
+			System.out.println("You have to pay RM5 for delivery cost.");
+			finaltotal = total - discountreceived + 50 ;
+			delivery = finaltotal +5;
+			System.out.println("The final amount you have to pay is RM" + delivery);	
+		}
+		
+		else if (total <= 100) {
+			System.out.println("You get RM5 off voucher for next purchase.");
+			finaltotal = total + 50;
+			System.out.println("You have to pay RM5 for delivery cost.");
+			delivery = finaltotal + 5;
+			System.out.println("The final amount you have to pay is RM" + delivery);
+		}
+
+		else if (total >= 300) {
+			System.out.println("You get RM10 off for next purchase, a free tool and and also free delivery.");
+			finaltotal = total + 50;
+			System.out.println("The final amount you have to pay is RM" + finaltotal);
+		}
+	
+		
+		else {
+			System.out.println("You have to pay RM5 for delivery cost.");
+			delivery = total + 5;
+			System.out.println("The final amount you have to pay is RM" + delivery);
+		}
+		
+		}
+
+	}
